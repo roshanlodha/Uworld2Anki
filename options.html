@@ -1,0 +1,39 @@
+<!-- options.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Uworld2Anki - Settings</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    label { display: block; margin-top: 10px; }
+    input[type="text"], input[type="number"], textarea { width: 100%; padding: 5px; }
+    button { margin-top: 20px; padding: 5px 10px; }
+    #status { margin-top: 10px; color: green; }
+  </style>
+</head>
+<body>
+  <h1>Extension Settings</h1>
+  <form id="settings-form">
+    <label for="apiKey">OpenAI API Key:</label>
+    <input type="text" id="apiKey" placeholder="Enter your API key" />
+
+    <label for="promptText">Prompt Template:</label>
+    <textarea id="promptText" rows="6">
+Given the following educational objective for USMLE Step 1, convert it into a cloze-style Anki card. Use the {{c1::…}} format for cloze deletions to hide key terms, processes, or concepts that should be recalled. Include only high yield information as cloze deletions (e.g. c1, c2, etc). Provide only the card text that can be copy and pasted into an anki. Educational Objective: {educational_objective}
+    </textarea>
+
+    <label for="model">Model:</label>
+    <input type="text" id="model" placeholder="gpt-3.5-turbo" />
+
+    <label for="maxTokens">Max Tokens:</label>
+    <input type="number" id="maxTokens" placeholder="150" />
+
+    <label for="temperature">Temperature:</label>
+    <input type="number" id="temperature" step="0.1" placeholder="0.7" />
+
+    <button type="submit">Save Settings</button>
+  </form>
+  <div id="status"></div>
+  <script src="options.js"></script>
+</body>
+</html>

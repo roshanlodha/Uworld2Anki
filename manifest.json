@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Uworld2Anki",
+    "version": "0.1",
+    "description": "Extracts the educational objective from Uworld pages and creates an Anki card via ChatGPT.",
+    "permissions": ["activeTab", "scripting", "storage"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon16.jpeg",
+        "48": "icons/icon48.jpeg",
+        "128": "icons/icon128.jpeg"
+      },
+      "default_title": "Uworld2Anki"
+    },
+    "options_ui": {
+      "page": "options.html",
+      "open_in_tab": true
+    }
+  }
