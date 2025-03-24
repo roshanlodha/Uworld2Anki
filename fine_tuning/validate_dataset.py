@@ -2,8 +2,14 @@ import json
 import tiktoken # for token counting
 import numpy as np
 from collections import defaultdict
+import argparse
 
-data_path = "anki_dataset.jsonl"
+# Parse command line arguments
+parser = argparse.ArgumentParser(description="Validate dataset for fine-tuning.")
+parser.add_argument("data_path", type=str, help="Path to the dataset file (JSONL format).")
+args = parser.parse_args()
+
+data_path = f"{args.data_path}_dataset.jsonl"
 
 # Load the dataset
 with open(data_path, 'r', encoding='utf-8') as f:
@@ -98,9 +104,9 @@ for ex in dataset:
     
 print("Num examples missing system message:", n_missing_system)
 print("Num examples missing user message:", n_missing_user)
-print_distribution(n_messages, "num_messages_per_example")
-print_distribution(convo_lens, "num_total_tokens_per_example")
-print_distribution(assistant_message_lens, "num_assistant_tokens_per_example")
+#print_distribution(n_messages, "num_messages_per_example")
+#print_distribution(convo_lens, "num_total_tokens_per_example")
+#print_distribution(assistant_message_lens, "num_assistant_tokens_per_example")
 n_too_long = sum(l > 16385 for l in convo_lens)
 print(f"\n{n_too_long} examples may be over the 16,385 token limit, they will be truncated during fine-tuning")
 
