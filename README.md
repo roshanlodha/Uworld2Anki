@@ -3,7 +3,6 @@
 Uworld2Anki is a Chrome extension designed to streamline the process of creating high-yield Anki flashcards from UWorld educational objectives. By leveraging OpenAI's ChatGPT API, the extension extracts educational objectives from UWorld pages and converts them into cloze-style Anki cards.
 
 Coming soon: 
-- **creating a fine-tuned model trained on existing anki decks**
 - image support & multiple card generation
 - table support
 
@@ -12,7 +11,7 @@ Coming soon:
 - Extracts educational objectives from UWorld pages.
 - Converts objectives into cloze-style Anki cards using the {{c1::...}} format.
 - Customizable prompt templates for generating cards.
-- Supports OpenAI's GPT models for card generation.
+- Uses a specially fine-tuned model for card generation thats trained on thousands of Anki cards.
 - Simple UI for generating and copying cards.
 
 ## Installation

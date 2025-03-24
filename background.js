@@ -8,7 +8,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
           sendResponse({ error: "API key not set. Please set your API key in the options page." });
           return;
         }
-        const model = items.model || "gpt-4o-mini";
+        const model = items.model || "ft:gpt-4o-mini-2024-07-18:personal:uworld2anki-v1:BETptg2X";
         const maxTokens = items.maxTokens || 300;
         const temperature = items.temperature || 0.3;
         

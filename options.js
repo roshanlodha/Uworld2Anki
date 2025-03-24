@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const apiKey = document.getElementById('apiKey').value;
     const promptText = document.getElementById('promptText').value;
     // Get selected model value from radio buttons.
-    const model = document.querySelector('input[name="model"]:checked').value || "gpt-3.5-turbo";
+    const model = document.querySelector('input[name="model"]:checked').value || "ft:gpt-4o-mini-2024-07-18:personal:uworld2anki-v1:BETptg2X";
     const maxTokens = parseInt(document.getElementById('maxTokens').value) || 150;
     const temperature = parseFloat(document.getElementById('temperature').value) || 0.7;
     
