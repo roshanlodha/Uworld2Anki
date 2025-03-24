@@ -2,6 +2,11 @@
 
 Uworld2Anki is a Chrome extension designed to streamline the process of creating high-yield Anki flashcards from UWorld educational objectives. By leveraging OpenAI's ChatGPT API, the extension extracts educational objectives from UWorld pages and converts them into cloze-style Anki cards.
 
+Coming soon: 
+- **creating a fine-tuned model trained on existing anki decks**
+- image support & multiple card generation
+- table support
+
 ## Features
 
 - Extracts educational objectives from UWorld pages.
@@ -12,7 +17,7 @@ Uworld2Anki is a Chrome extension designed to streamline the process of creating
 
 ## Installation
 
-1. Clone or download this repository to your local machine.
+1. Download and extract the latest version from the "releases" tab.
 2. Open Chrome and navigate to `chrome://extensions/`.
 3. Enable **Developer mode** in the top-right corner.
 4. Click **Load unpacked** and select the project folder.
@@ -44,22 +49,19 @@ To configure the extension:
 
 ## Requirements
 
-- Calid OpenAI API key.
-- UWorld account
+- Valid OpenAI API key.
+- UWorld account.
 - Chrome browser with extensions enabled.
+- Anki with Cloze card type.
 
 ## Privacy Policy
 
-Your privacy is important. Please review the [Privacy Policy](https://roshanlodha.com/privacy_policy) for details on how your data is handled.
+Your privacy is important. I do not collect or store any user data. Please review the [Privacy Policy](https://roshanlodha.com/uworld2anki/privacy_policy) for details on how your data is handled.
 
 ## License
 
 This project is licensed under the [MIT License](LICENSE.md). See the LICENSE file for details.
 
-## Contributing
-
-Contributions are welcome! Feel free to submit issues or pull requests to improve the project.
-
 ## Disclaimer
 
-This extension is not affiliated with UWorld or Anki. Use it responsibly and ensure compliance with UWorld's terms of service.  
+This extension is not affiliated with UWorld or Anki. Use it responsibly and ensure compliance with UWorld's terms of service. Uworld2Anki was developed and tested using the UWorld Demo. 

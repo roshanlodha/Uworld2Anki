@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Setup slider update listeners for maxTokens and temperature.
   const maxTokensSlider = document.getElementById('maxTokens');
   const maxTokensValue = document.getElementById('maxTokensValue');
   const temperatureSlider = document.getElementById('temperature');
   const temperatureValue = document.getElementById('temperatureValue');
 
-  // Initialize slider display values.
   maxTokensValue.textContent = maxTokensSlider.value;
   temperatureValue.textContent = parseFloat(temperatureSlider.value).toFixed(1);
 
@@ -17,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
     temperatureValue.textContent = parseFloat(temperatureSlider.value).toFixed(1);
   });
 
-  // Load saved settings from chrome.storage.sync.
   chrome.storage.sync.get(['apiKey', 'promptText', 'model', 'maxTokens', 'temperature'], function(items) {
     if (items.apiKey) {
       document.getElementById('apiKey').value = items.apiKey;
@@ -42,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Save settings when the form is submitted.
   document.getElementById('settings-form').addEventListener('submit', function(e) {
     e.preventDefault();
     const apiKey = document.getElementById('apiKey').value;
